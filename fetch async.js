@@ -24,15 +24,15 @@ fetch("picture.jpg")      // fetch data
     }
 
 
-    async function jsonData (){
+    async function jsonData (country){
         const response = await fetch("./currencies.json");
         const data = await response.json();
         console.log(data["AED"])
-         document.getElementById("data").innerHTML = JSON.stringify(data);
+         document.getElementById("data").innerHTML = JSON.stringify(data[country]);
     }
 
 
-    jsonData ().then(console.log("data")).catch(error=>console.error(error))
+    jsonData ("PKR").then(console.log("data")).catch(error=>console.error(error))
 
   catchRainbow()
     .then(console.log("YAY!"))
