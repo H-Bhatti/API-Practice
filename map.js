@@ -1,7 +1,7 @@
 // adding map
 var map = L.map('mapID').setView([0, 0], 1);
 
-?adding custom icon
+// adding custom icon
 var myIcon = L.icon({
     iconUrl: './International_Space_Station.svg.png',
     iconSize: [50, 32],
